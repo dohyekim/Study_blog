@@ -10,38 +10,38 @@
 
 + MySQL은 database와 user를 따로 생성해야 한다. 우선 MySQL container를 실행시키고 shell을 띄운 후 `$> mysql -u root -p`를 입력해 root로 들어ㅓ간다.
 
-1. `mysql> show databases;`
+1. `mysql> show databases;`<br />
   위 명령어는 현재 있는 database의 목록을 모두 확인하는 명령어다. 이 명령어를 통해 현재 있는 database의 목록을 확인한다.
   
-2. `mysql> create database <database 이름>;
+2. `mysql> create database <database 이름>;<br />
   확인 후 새로운 database를 만들고 싶을 때 위의 쿼리문을 입력한다. 참고로 database를 만드는 권한은 root에 있다. 새로 만든 database의 이름도 정해준다. DB의 모든 쿼리문은 `;`로 끝을 나타낸다.
   
-3. `mysql> show databases;`
+3. `mysql> show databases;`<br />
   다시 한 번 database의 목록을 확인한다. 이때 방금 만든 database의 이름이 있으면 잘 만들어진 것이다.
   
-4. `mysql> use <database 이름>`
+4. `mysql> use <database 이름>`<br />
   방금 만든 database 안에서 table을 만들거나 보는 등의 작업을 하려면 그 database를 선택하는 과정이 필요하다. 그 과정을 실행하기 위해서 use 명령문을 사용한다. 이 경우에는 끝에 ;를 붙이지 않아도 된다.
   
-5. `mysql> show tables;`
+5. `mysql> show tables;`<br />
   새로운 database를 만들었기 때문에 Empty set이라는 결과가 나올 것이다.
   
-6. `mysql> create table <table이름>(<설정>);`
+6. `mysql> create table <table이름>(<설정>);`<br />
   제대로 database를 생성하고 선택했다면 테이블을 생성할 수 있다. 여러 설정들을 입력한 후 table을 만든다.
   
-7. `mysql> show tables;` 
+7. `mysql> show tables;` <br />
   마지막으로 다시 한 번 표의 목록을 요청하면 방금 만든 table이 보일 것이다.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 ### MySQL에서 사용자(USER) 생성하기
 
-1. `mysql> create user <user 이름>@'<host>' identified by '<비밀번호>';`
+1. `mysql> create user <user 이름>@'<host>' identified by '<비밀번호>';`<br />
   새로 만들 user의 이름을 설정하고 host 자리에는 localhost 혹은 %, 아니면 local IP 주소를 적는다. identified by 뒤에는 새로 설정할 비밀번호를 적는다.
   
-2.1. `mysql> grant all privileges on *.* to '<user 이름>'@'<host>';`
+2.1. `mysql> grant all privileges on *.* to '<user 이름>'@'<host>';`<br />
   새로 만든 user에게 권한을 부여하는 명령이다. 위의 `*.*`는 * :모든 database에 대해 * :모든 권한을 부여하겠다는 의미이다. 
   
-2.2. `mysql> grant all privileges on <database 이름>.* to '<user 이름>'@'<host>;`
+2.2. `mysql> grant all privileges on <database 이름>.* to '<user 이름>'@'<host>;`<br />
   위 명령문은 어느 한 database에 *(모든 권한)을 부여하겠다는 의미이다.
   
-3. `mysal> flush privileges;`
+3. `mysal> flush privileges;`<br />
   앞서 한 모든 설정들을 적용하겠다는 의미이다. git의 `commit`과 비슷한 개념이라고 이해하면 된다.
