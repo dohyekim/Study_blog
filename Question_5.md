@@ -1,7 +1,7 @@
-1) Linux(Ubuntu) Docker Container를 구동하기 위한 절차를 쓰고, 설치된 Ubuntu Container에 2)Telnet daemon 구동하기, 3)한글 사용 설정하기, 4)Git 사용 설정하기 등의 작업 절차를 기술하시오.
+Linux(Ubuntu) Docker Container를 구동하기 위한 절차를 쓰고, 설치된 Ubuntu Container에 Telnet daemon 구동하기, 한글 사용 설정하기, Git 사용 설정하기 등의 작업 절차를 기술하시오.
 ---------------------------------------------------------
 
-### * Ubuntu Docker Container 구동하기
+### + Ubuntu Docker Container 구동하기
 
 1. `$> docker pull <image 이름>` <br />
   Ubuntu image를 다운(pull)받는다. <br />
@@ -15,7 +15,7 @@
     container에서 나올 때는 exit을 치면 된다.<br />
     
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-### * Telnet daemon 구동하기
+### + Telnet daemon 구동하기
 
 1. [**deamon**](https://ko.wikipedia.org/wiki/%EB%8D%B0%EB%AA%AC_(%EC%BB%B4%ED%93%A8%ED%8C%85))이란 여러 OS를 사용하는 상황에서 사용자가 직접적으로 제어하지 않고 백그라운드에서 돌면서 여러 작업을 하는 프로그램을 의미한다. 뒤에 d를 달고 있다. <br />
 2. docker container 안으로 들어간다.<br />
@@ -42,7 +42,7 @@
   새로 만든 container를 run시킨 후 telnet 포트인 **23번 포트**로 연결한다.<br />
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-### * 한글 설정하기
+### + 한글 설정하기
 
 1. `$> apt-get install locales`<br />
 2. `$> cat /usr/share/i18n/SUPPORTED`<br />
@@ -60,7 +60,7 @@
 export LANGUAGE=ko` 를 붙여 넣으면 위 설정을 계속 유지할 수 있다.<br />
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-### * Git 사용하기
+### + Git 사용하기
 
 1. `#> apt-get update`<br />
 2. `#> apt-get install git`<br />
