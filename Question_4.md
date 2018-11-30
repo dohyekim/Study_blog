@@ -18,10 +18,10 @@ Docker의 개념과 구성요소(image, container, docker-machine 등)에 대해
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #### 다음은 Windows 10 이하의 버전에서 Docker를 설치하는 방법입니다.
-1. * docker는 Linux기반이므로 windows사용자라면 [**Docker for Windows**](https://store.docker.com/editions/community/docker-ce-desktop-windows)로 들어가 설치해야 한다.<br />
+1. docker는 Linux기반이므로 windows사용자라면 [**Docker for Windows**](https://store.docker.com/editions/community/docker-ce-desktop-windows)로 들어가 설치해야 한다.<br />
 1.1. **Get Docker**를 클릭해 설치한다.<br />
 1.2. 다운로드한 **Docker for Windows Installer.exe** 실행파일을 클릭해 설치한다.<br />
-2. * Windows 10 이하의 버전은 oracle이 제공하는 가상화 툴인 VirtualBox를 이용한 [**Docker Toolbox**](https://docs.docker.com/toolbox/toolbox_install_windows/)도 설치해야 한다.<br />
+2. Windows 10 이하의 버전은 oracle이 제공하는 가상화 툴인 VirtualBox를 이용한 [**Docker Toolbox**](https://docs.docker.com/toolbox/toolbox_install_windows/)도 설치해야 한다.<br />
 3. 위의 과정을 모두 설치하고 나면 **Docker Quickstart Terminal**이 생길 것이다. 이 터미널을 열어 4번의 명령어를 실행해본다. <br />
 4. `$> docker version`<br /> 
 Docker의 버전을 체크할 수 있다.<br />
