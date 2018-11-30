@@ -17,4 +17,4 @@ Docker를 활용하여 오라클 Express Edition을 설치하는 과정을 기�
   현재 가동중인 container의 목록을 보여주는 명령어이다. Container 생성이 끝나면 제대로 설치가 됐는지 확인하기 위해 위 명령을 실행할 수 있다. 명령의 결과로 방금 지정한 이름으로 된 container가 있다면 잘 설치된 것이다. (cf. `docker ps -a` 명령어는 가동중인 container를 비롯해 현재 가동중이지 않은 container의 목록까지 전부 보여주는 명령어이다.)
   
 6. `$> docker exec -it oracle bash`
-  `$> docker ps`명령을 실행하면 command 칸에 컨테이너를 띄우면 기본적으로 실행되는 명령어가 적혀있다. oracle의 경우에는 '/entrypoint.sh'이라고 적혀있는 걸 볼 수 있다. 이는 새로운 shell이 생기지 안흔다는 것을 의미함으로 oracle의 세계로 들어가기 위해서는 bash 명령을 통해 새로운 shell을 덮어야만 한다. 따라서 docker attach 명령어가 아닌 exec 명령어를 사용하고 뒤에 bash를 실행한다는 의미로 bash까지 적어주어야 한다.
+  5번의 명령을 실행하면 command 칸에 컨테이너를 띄우면 기본적으로 실행되는 명령어가 적혀있다. oracle의 경우에는 '/entrypoint.sh'이라고 적혀있는 걸 볼 수 있다. 이는 새로운 shell이 생기지 안흔다는 것을 의미함으로 oracle의 세계로 들어가기 위해서는 bash 명령을 통해 새로운 shell을 덮어야만 한다. 따라서 docker attach 명령어가 아닌 exec 명령어를 사용하고 뒤에 bash를 실행한다는 의미로 bash까지 적어주어야 한다.
