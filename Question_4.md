@@ -7,7 +7,8 @@ Docker의 개념과 구성요소(image, container, docker-machine 등)에 대해
 #### 다음은 Docker의 기본 개념과 구성요소입니다.
 
 * Windows는 내가 원래 가지고 있는 서버다.<br />
-* 여기서 새로운 서버를 열고 싶을 때 docker를 설치한다. <br />
+* 여기서 새로운 서버를 열고 싶을 때 Docker를 설치한다. <br />
+* Docker는 Linux 기반이므로 windows 사용자라면 VirtualBox가 필요한데, 이는 Docker의 실행 환경을 명령으로 자동 생성하기 위한 툴이다.
 * Docker 안에는 여러 개의 서버를 만들 수 있다. 이때 서버를 만들기 위해 처음으로 해야할 일이 image를 다운받는 것이다. Image 안에는 그 서버를 실행시키기 위해 필요한 프로그램을 비롯한 모든 것이 들어있다.<br />
 * image는 만들어두면 PC가 바뀌더라도 어디에서든 사용할 수 있다. 다른 PC를 사용하게 되면 해당 image만 다운(pull)하면 그대로 쓸 수 있어 매우 편리하다.<br />
 * image를 다운 받았다면 그 image를 바탕으로 container를 띄우면 서버가 생성된다. 알맹이는 image이지만 image는 컨테이너로 띄우지 않으면 그냥 파일일 뿐이다. image를 컨테이너로 띄우는 순간 새로운 서버로 태어나게 된다고 볼 수 있다.<br />
