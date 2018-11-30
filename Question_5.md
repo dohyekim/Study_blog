@@ -14,4 +14,7 @@
 3.2. `$> docker exec -it <컨테이너 이름> bash`<br />
     container에서 나올 때는 exit을 치면 된다.<br />
     
-### 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### * Telnet daemon 구동하기
+
+1. 
