@@ -8,7 +8,7 @@
 
 ### MySQL에서 데이터베이스(Database) 생성하기
 
-+ MySQL은 database와 user를 따로 생성해야 한다. 우선 MySQL container를 실행시키고 shell을 띄운 후 `$> mysql -u root -p`를 입력해 root로 들어ㅓ간다.
++ MySQL은 database와 user를 따로 생성해야 한다. 우선 MySQL container를 실행시키고 shell을 띄운 후 `$> mysql -u root -p`를 입력해 root로 들어간다.
 
 1. `mysql> show databases;`<br />
   위 명령어는 현재 있는 database의 목록을 모두 확인하는 명령어다. 이 명령어를 통해 현재 있는 database의 목록을 확인한다.<br />
