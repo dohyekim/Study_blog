@@ -13,4 +13,4 @@ where s.id > 600 and s.id <= 1001;
 
 select en.*, stu.name as 'student name', sub.name as 'subject name' 
 from Enroll as en inner join Student as stu on en.student = stu.id 
-		  inner join Subject as sub on en.subject = sub.id order by id;
+				  inner join Subject as sub on en.subject = sub.id order by id;
