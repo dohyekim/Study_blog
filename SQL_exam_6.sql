@@ -67,7 +67,7 @@ select * from Subject;
 select subject from Temp group by subject;
 
 
--- 과목 이름, 평균, 총 학생수
+-- 과목, 평균, 총 학생수
 select max(sub.name) as 과목명, cast((sum(midterm) + sum(final)) / count(*) / 2 as signed integer ) as 평균,
 count(*) as '총 학생수'
 from Enroll as en inner join Student s on en.student = s.id
