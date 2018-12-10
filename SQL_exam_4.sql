@@ -80,17 +80,29 @@ select s.id, d.name
 from Student s inner join Dept d
 on s.dept = d.id;
 
--- FOREIGN KEY 걸기
+-- prof column에 FOREIGN KEY 걸기
+
 ALTER TABLE `dooodb`.`Dept` 
 CHANGE COLUMN `prof` `prof` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0' ;
 
 
 ALTER TABLE `dooodb`.`Dept` 
 ADD INDEX `fk_prof_prof_idx` (`prof` ASC);
-;
+
 ALTER TABLE `dooodb`.`Dept` 
 ADD CONSTRAINT `fk_prof_prof`
   FOREIGN KEY (`prof`)
   REFERENCES `dooodb`.`Prof` (`id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+-- student column에 FOREIGN KEY 
+ALTER TABLE `dooodb`.`Dept` 
+ADD INDEX `fk_student_student_idx` (`student` ASC);
+
+ALTER TABLE `dooodb`.`Dept` 
+ADD CONSTRAINT `fk_stu_stu`
+  FOREIGN KEY (`student`)
+  REFERENCES `dooodb`.`Student` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
