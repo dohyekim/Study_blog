@@ -8,4 +8,4 @@
 
 ### 5. https://github.com/dohyekim/Study_blog/blob/master/SQL_exam_5.sql
 
-### 6.
+### 6. https://github.com/dohyekim/Study_blog/blob/master/SQL_exam_6.sql
