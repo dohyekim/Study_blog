@@ -27,6 +27,11 @@ insert into Grade(enroll) select id from Enroll;
 update Grade set midterm = ceil((0.5 + rand()/2) * 100) where id > 0;
 update Grade set final = ceil((0.5 + rand()/2) * 100) where id > 0;
 
+-- 검증 (수업 때 추가)
+-- 1. count
+select count(*), select count(*) from Enroll) from Grade;
+-- 2. min/max
+select min(midterm), min(final), max(midterm), max(final) from Grade;
 commit;
 
 -- Report 1
