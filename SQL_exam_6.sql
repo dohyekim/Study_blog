@@ -80,6 +80,10 @@ from Enroll as en inner join Student s on en.student = s.id
                   inner join Grade gd on gd.enroll = en.id
 group by sub.id;
 
+-- 검증
+select subject, count(*) from Enroll group by subject;
+
+
 -- Report 3 (학생명, 학교명, 과목수, 총점, 평균, 평점)
 
 select min(s.name) as 학생명, 
