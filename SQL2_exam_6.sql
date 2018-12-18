@@ -4,7 +4,6 @@ create procedure sp_try_cursor()
 
 begin
 
-declare _sbj smallint default 1;
 declare try_end boolean default false;
 declare try_total int default 0;
 declare try_student varchar(5);
