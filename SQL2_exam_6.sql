@@ -42,7 +42,7 @@ begin
 
 end //
 delimiter ;
-
+call sp_try_cursor();
 
 drop procedure if exists sp_res_cursor;
 delimiter //
@@ -89,11 +89,13 @@ begin
 				SET @sql = CONCAT('update temp_res set ', 'rank', i,' = ', '"',res_student,'"', ' where 과목 = ', '"',res_sub_name,'"');
 				PREPARE myQuery from @sql;
 				EXECUTE myQuery;
+				DEALLOCATE PREPARE myQuery;
 
 
 				SET @sql2 = CONCAT('update temp_res set ','score', i,' = ', '"',res_total / 2,'"' , ' where 과목 = ', '"',res_sub_name,'"');
 				PREPARE myQuery2 from @sql2;
 				EXECUTE myQuery2;
+				DEALLOCATE PREPARE myQuery2;
 
 					if i = 3 then set i = 1;
 					end if;
@@ -114,7 +116,6 @@ end //
 delimiter ;
 
 
-call sp_try_cursor();
 call sp_res_cursor();
 
 select * from temp_res;
