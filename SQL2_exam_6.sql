@@ -43,6 +43,7 @@ begin
 end //
 delimiter ;
 
+
 drop procedure if exists sp_res_cursor;
 delimiter //
 create procedure sp_res_cursor()
@@ -112,6 +113,8 @@ begin
 end //
 delimiter ;
 
+
+call sp_try_cursor();
 call sp_res_cursor();
 
 select * from temp_res;
