@@ -8,7 +8,7 @@ returns int
 begin
 return
 (
-select round(avg(midterm + final) / count(*)) 평균 
+select round(avg(midterm + final) / 2) 평균 
 from Grade g inner join Enroll en on g.enroll =en.id
 where en.student = stu_id
 );
