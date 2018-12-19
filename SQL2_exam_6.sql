@@ -12,7 +12,6 @@ begin
 	declare try_cursor cursor for
 		select 학생명, 과목번호, 과목명, 총점 
 		 from v_stu_sub_grade_enroll v
-	          inner join Subject sub on v.과목번호 = sub.id
 		order by 과목번호, 총점 desc; 
 	declare continue handler for not found set try_end = TRUE;
 
