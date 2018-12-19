@@ -16,7 +16,7 @@ begin
 					 where cm.student <> 1 and cm.student <> 2
 					 order by rand()
 					 limit 1);
-					 
+-- 회장은 1					 
 	insert into ClubMember(club, student, level) values(new.id, student_id, 1);
 
 end //
