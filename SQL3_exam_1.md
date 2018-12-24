@@ -30,7 +30,7 @@
 ### Foreign Key
 ------------------------------------
 1. foreign key의 이름은 다음과 같은 형식으로 정한다. </br>
-   `fk_(참조하는 table 약어)_(참조되는 table 약어)`
+   > fk_(참조하는 table 약어)_(참조되는 table 약어)
 2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다.
 3. foreign key는 참조하는 테이블의 id column에 설정한다.
 
@@ -47,15 +47,15 @@
 ### 기타 이름 규칙
 -----------------------------------
 1. view </br>
-    `v_(join되는 테이블 이름)`
+    > v_(join되는 테이블 이름)
 2. trigger </br>
-    `tr_(테이블)_(영향 받는 테이블 이름)`
+    > tr_(테이블)_(영향 받는 테이블 이름)
 3. temporary table </br> 
-    `temp_(이름) `
+    > temp_(이름) 
 4. procedure </br> 
-    `sp_(이름) `
+    > sp_(이름) 
 5. function </br>
-    `fn_(이름) `
+    > fn_(이름) 
 6. variable </br>
-    `_(이름) `
+    > _(이름) 
 
