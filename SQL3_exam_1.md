@@ -20,8 +20,8 @@
 7. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
 8. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
    나머지는 "(세부 정보)_name"로 만든다. </br>
-   `  ex) Table: Employees </br>
-   `  ex) Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) </br> 
+   ```  ex) Table: Employees </br>
+     ex) Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) </br> ```
 9. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
 10. data type이 varchar이고 not null인 경우 default는 " "로 한다.
 11. 숫자가 2자리 이하면 data type은 "tinyint", 5자리 이하면 "smallint", 11자리 이하면 "int"로 한다.
@@ -40,8 +40,8 @@
 2. 오라클의 "varchar"와 "varchar2"은 "varchar"로 통일한다.
 3. number의 경우 다음과 같이 통일한다.</br>
    ``` ex. number(3) 이하는 tinyint로 변환한다. </br> 
-    ex. number(5) 이하는 smallint로 변환한다. </br>`
-    ex. number(5) 초과시 int로 변환한다. </br>`
+    ex. number(5) 이하는 smallint로 변환한다. </br>
+    ex. number(5) 초과시 int로 변환한다. </br>
     ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다. </br> ```
 
 ### 기타 이름 규칙
