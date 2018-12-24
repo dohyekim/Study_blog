@@ -15,8 +15,8 @@
 4. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
 5. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
    나머지는 "(세부 정보)_name"로 만든다. </br>
-   > ex) Table: Employees
-   >     Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) 
+   > ex) Table: Employees </br>
+   >     Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) </br>
 6. column 이름에는 대문자는 허용하지 않는다.
 7. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.
 8. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
