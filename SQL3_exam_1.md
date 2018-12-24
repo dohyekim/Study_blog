@@ -47,15 +47,15 @@
 ### 기타 이름 규칙
 -----------------------------------
 1. view </br>
-    `v_(join되는 테이블 이름) </br>`
+    `v_(join되는 테이블 이름)`
 2. trigger </br>
-    `tr_(테이블)_(영향 받는 테이블 이름) </br>`
+    `tr_(테이블)_(영향 받는 테이블 이름)`
 3. temporary table </br> 
-    `temp_(이름) </br>`
+    `temp_(이름) `
 4. procedure </br> 
-    `sp_(이름) </br>`
+    `sp_(이름) `
 5. function </br>
-    `fn_(이름) </br>`
+    `fn_(이름) `
 6. variable </br>
-    `_(이름) </br>`
+    `_(이름) `
 
