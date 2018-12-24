@@ -39,10 +39,10 @@
 1. 오라클의 Data Type이 "varchar2"일경우 "varchar"로 변환해준다. 
 2. 오라클의 "varchar"와 "varchar2"은 "varchar"로 통일한다.
 3. number의 경우 다음과 같이 통일한다.</br>
-   ``` ex. number(3) 이하는 tinyint로 변환한다. </br> 
-    ex. number(5) 이하는 smallint로 변환한다. </br>
-    ex. number(5) 초과시 int로 변환한다. </br>
-    ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다. </br> ```
+    ` ex. number(3) 이하는 tinyint로 변환한다.` </br> 
+    ` ex. number(5) 이하는 smallint로 변환한다.` </br>
+    ` ex. number(5) 초과시 int로 변환한다.` </br>
+    ` ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다.` </br> 
 
 ### 기타 이름 규칙
 -----------------------------------
