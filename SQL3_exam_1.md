@@ -34,7 +34,8 @@
 ------------------------------------
 1. foreign key의 이름은 다음과 같은 형식으로 정한다. </br>
    > fk_(참조하는 column 풀네임/약어)_(참조되는 table 풀네임/약어)
-2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다.
+2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다. <br>
+   단 self-join의 경우는 이름을 다르게 할 수 있다.
 3. foreign key는 참조하는 테이블의 id column에 설정한다.
 
 
