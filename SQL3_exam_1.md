@@ -15,8 +15,8 @@
 4. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
 5. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
    나머지는 "(세부 정보)_name"로 만든다. </br>
->   ex) Table: Employees
-        Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) 
+   > ex) Table: Employees
+   >     Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) 
 6. column 이름에는 대문자는 허용하지 않는다.
 7. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.
 8. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
@@ -27,7 +27,7 @@
 ### Foreign Key
 ------------------------------------
 1. foreign key의 이름은 다음과 같은 형식으로 정한다.
-   "fk_(참조하는 table 약어)_(참조되는 table 약어)"
+   > "fk_(참조하는 table 약어)_(참조되는 table 약어)"
 2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다.
 3. foreign key는 참조하는 테이블의 id column에 설정한다.
 
@@ -36,23 +36,23 @@
 1. 오라클의 Data Type이 "varchar2"일경우 "varchar"로 변환해준다. 
 2. 오라클의 "varchar"와 "varchar2"은 "varchar"로 통일한다.
 3. number의 경우 다음과 같이 통일한다.
->   ex. number(3) 이하는 tinyint로 변환한다.
->   ex. number(5) 이하는 smallint로 변환한다.
->   ex. number(5) 초과시 int로 변환한다.
->   ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다.
+   > ex. number(3) 이하는 tinyint로 변환한다.
+   > ex. number(5) 이하는 smallint로 변환한다.
+   > ex. number(5) 초과시 int로 변환한다.
+   > ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다.
 
 ### 기타 이름 규칙
 -----------------------------------
 1. view
->   "v_(join되는 테이블 이름)"
+   > "v_(join되는 테이블 이름)"
 2. trigger 
->   "tr_(테이블)_(영향 받는 테이블 이름)"
+   > "tr_(테이블)_(영향 받는 테이블 이름)"
 3. temporary table 
->   "temp_(이름)"
+   > "temp_(이름)"
 4. procedure 
->   "sp_(이름)"
+   > "sp_(이름)"
 5. function 
->   "fn_(이름)"
+   > "fn_(이름)"
 6. variable
->   "_(이름)"
+   > "_(이름)"
 
