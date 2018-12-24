@@ -25,9 +25,9 @@
 9. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
 10. data type이 varchar이고 not null인 경우 default는 " "로 한다.
 11. 숫자형 data tape의 경우 다음과 같이 설정한다. </br>
-   > 숫자가 2자리 이하인 경우 "tinyint"로 설정 </br>
-   > 숫자가 5자리 이하인 경우 "smallint"로 설정 </br>
-   > 숫자가 11자리 이하면 경우 "int"로 설정 </br>
+   `숫자가 2자리 이하인 경우 tinyint로 설정` </br>
+   `숫자가 5자리 이하인 경우 smallint로 설정` </br>
+   `숫자가 11자리 이하면 경우 int로 설정` </br>
 12. `id` column의 data 길이(length)는 테이블의 행(row) 개수를 고려하여 잡는다.
 
 ### Foreign Key
