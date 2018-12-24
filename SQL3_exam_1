@@ -1,4 +1,47 @@
 Table
 1. 첫 글자는 대문자로 한다.
 2. 첫 글자를 제외하고는 소문자로 쓴다.
-3. '_' 
+3. '_'가 있는 경우에 '_' 뒤의 문자는 모두 소문자를 쓴다.
+4. '_' 외에 모든 특수문자나 띄어쓰기는 허용하지 않는다.
+5. 한글명은 허용하지 않는다.
+6. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다. 
+
+
+Column
+1. 각 테이블에는 하나의 id column이 반드시 있어야 한다.
+2. 테이블에는 반드시 primary key가 id column에 걸려있어야 한다.
+3. id column은 auto_increment로 한다.
+4. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
+5. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
+   나머지는 "(세부 정보)_name"로 만든다.
+ex) Table: Employees
+    Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) 
+6. column 이름에는 대문자는 허용하지 않는다.
+7. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.
+8. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
+9. data type이 varchar이고 not null인 경우 default는 " "로 한다.
+10. 숫자가 2자리 이하면 data type은 "tinyint", 5자리 이하면 "smallint", 11자리 이하면 "int"로 한다.
+11. id column의 data type은 테이블의 row 개수를 고려하여 잡는다.
+12. 
+13. 
+
+-- Fk 이름 규칙
+"fk_(참조하는 table 약어)_(참조되는 table 약어)"
+fk가 걸리는 column 이름은 참조하는 table 이름으로 한다.
+fk는 참조하는 테이블의 id column에 설정한다.
+
+-- Oracle을 MySQL로 이관하는 경우 data type 설정
+varchar2
+number
+
+
+
+기타
+view 이름 규칙 "v_(join되는 테이블 이름)"
+trigger 이름 규칙 "tr_(테이블)_(영향 받는 테이블 이름)"
+temporary table "temp_(이름)" 규칙
+procedure 이름 규칙 "sp_(이름)"
+function 이름 규칙 "fn_(이름)"
+
+-- 변수선언할 때
+variable앞에는 _를 적는다.
