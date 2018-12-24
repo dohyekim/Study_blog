@@ -20,8 +20,8 @@
 7. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
 8. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
    나머지는 "(세부 정보)_name"로 만든다. </br>
-   ` ex) Table: Employees ` </br>
-   ` ex) Column: (employee의 이름 column) "name", (직책 이름 column) "job_name" ` </br> 
+   `ex) Table: Employees ` </br>
+   `ex) Column: (employee의 이름 column) "name", (직책 이름 column) "job_name" ` </br> 
 9. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
 10. data type이 varchar이고 not null인 경우 default는 " "로 한다.
 11. 숫자가 2자리 이하면 data type은 "tinyint", 5자리 이하면 "smallint", 11자리 이하면 "int"로 한다.
@@ -30,7 +30,7 @@
 ### Foreign Key
 ------------------------------------
 1. foreign key의 이름은 다음과 같은 형식으로 정한다. </br>
-   ` fk_(참조하는 table 약어)_(참조되는 table 약어) `
+   `fk_(참조하는 table 약어)_(참조되는 table 약어)`
 2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다.
 3. foreign key는 참조하는 테이블의 id column에 설정한다.
 
@@ -47,7 +47,7 @@
 ### 기타 이름 규칙
 -----------------------------------
 1. view </br>
-    ` v_(join되는 테이블 이름) ` </br>
+    `v_(join되는 테이블 이름) ` </br>
 2. trigger </br>
     `tr_(테이블)_(영향 받는 테이블 이름)` </br>
 3. temporary table </br> 
