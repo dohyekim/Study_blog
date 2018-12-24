@@ -29,7 +29,7 @@
 
 ### Foreign Key
 ------------------------------------
-1. foreign key의 이름은 다음과 같은 형식으로 정한다.
+1. foreign key의 이름은 다음과 같은 형식으로 정한다. </br>
    "fk_(참조하는 table 약어)_(참조되는 table 약어)"
 2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다.
 3. foreign key는 참조하는 테이블의 id column에 설정한다.
@@ -38,7 +38,7 @@
 ---------------------------------------
 1. 오라클의 Data Type이 "varchar2"일경우 "varchar"로 변환해준다. 
 2. 오라클의 "varchar"와 "varchar2"은 "varchar"로 통일한다.
-3. number의 경우 다음과 같이 통일한다.
+3. number의 경우 다음과 같이 통일한다.</br>
    > ex. number(3) 이하는 tinyint로 변환한다. </br>
    > ex. number(5) 이하는 smallint로 변환한다. </br>
    > ex. number(5) 초과시 int로 변환한다. </br>
@@ -46,16 +46,16 @@
 
 ### 기타 이름 규칙
 -----------------------------------
-1. view
-    "v_(join되는 테이블 이름)"
-2. trigger 
-    "tr_(테이블)_(영향 받는 테이블 이름)"
-3. temporary table 
-    "temp_(이름)"
-4. procedure 
-    "sp_(이름)"
-5. function 
-    "fn_(이름)"
-6. variable
-    "_(이름)"
+1. view </br>
+    "v_(join되는 테이블 이름)" </br>
+2. trigger </br>
+    "tr_(테이블)_(영향 받는 테이블 이름)" </br>
+3. temporary table </br> 
+    "temp_(이름)" </br>
+4. procedure </br> 
+    "sp_(이름)" </br>
+5. function </br>
+    "fn_(이름)" </br>
+6. variable </br>
+    "_(이름)" </br>
 
