@@ -5,24 +5,27 @@
 3. 띄어쓰기는 ‘_’ 로 대체한다.
 4. ‘_’ 외에 모든 특수문자나 띄어쓰기는 허용하지 않는다. </br>
 5. 한글명은 허용하지 않는다.
-6. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다. 
+6. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.
+7. 테이블의 이름은 단수형으로 한다.
 
 ### Column
 ---------------------------------
 1. 각 테이블에는 하나의 id column이 반드시 있어야 한다.
-2. 테이블에는 반드시 primary key가 id column에 걸려있어야 한다.
+2. primary key는 반드시 id column에 걸려있어야 한다.
 3. id column은 auto_increment로 한다.
-4. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
-5. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
+4. primary key가 job_id의 경우에는 data type을 varchar로 한다. </br>
+   단, 이관 후 int, auto_increment로 변환한다.</br>
+5. column 이름에는 대문자는 허용하지 않는다.
+6. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.
+7. 각 테이블마다 이름, 명칭 data를 담은 column명은 "name"으로 통일한다.
+8. 여러 개의 이름, 명칭 data를 담는 경우에는 대표적인 것 하나만 "name"으로 정한 뒤
    나머지는 "(세부 정보)_name"로 만든다. </br>
    > ex) Table: Employees </br>
-   >     Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) </br>
-6. column 이름에는 대문자는 허용하지 않는다.
-7. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.
-8. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
-9. data type이 varchar이고 not null인 경우 default는 " "로 한다.
-10. 숫자가 2자리 이하면 data type은 "tinyint", 5자리 이하면 "smallint", 11자리 이하면 "int"로 한다.
-11. id column의 data type은 테이블의 row 개수를 고려하여 잡는다.
+   > ex) Column: "name"(employee의 이름 column),"job_name"(직책 이름 column) </br>
+9. 이름, 명칭의 경우 data type은 varchar(40)으로 한다.
+10. data type이 varchar이고 not null인 경우 default는 " "로 한다.
+11. 숫자가 2자리 이하면 data type은 "tinyint", 5자리 이하면 "smallint", 11자리 이하면 "int"로 한다.
+12. id column의 data length는 테이블의 row 개수를 고려하여 잡는다.
 
 ### Foreign Key
 ------------------------------------
