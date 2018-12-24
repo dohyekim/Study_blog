@@ -34,15 +34,6 @@
 2. foreign key가 걸리는 column의 이름은 참조하는 table 이름과 같게 한다.
 3. foreign key는 참조하는 테이블의 id column에 설정한다.
 
-### Oracle에서 MySQL로 이관하는 경우 data type 설정
----------------------------------------
-1. 오라클의 Data Type이 "varchar2"일경우 "varchar"로 변환해준다. 
-2. 오라클의 "varchar"와 "varchar2"은 "varchar"로 통일한다.
-3. number의 경우 다음과 같이 통일한다.</br>
-    ` ex. number(3) 이하는 tinyint로 변환한다.` </br> 
-    ` ex. number(5) 이하는 smallint로 변환한다.` </br>
-    ` ex. number(5) 초과시 int로 변환한다.` </br>
-    ` ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다.` </br> 
 
 ### 기타 이름 규칙
 -----------------------------------
@@ -58,4 +49,14 @@
     > fn_(이름) 
 6. variable </br>
     > _(이름) 
+    
+### Oracle에서 MySQL로 이관하는 경우 data type 설정
+---------------------------------------
+1. 오라클의 Data Type이 "varchar2"일경우 "varchar"로 변환해준다. 
+2. 오라클의 "varchar"와 "varchar2"은 "varchar"로 통일한다.
+3. number의 경우 다음과 같이 통일한다.</br>
+    ` ex. number(3) 이하는 tinyint로 변환한다.` </br> 
+    ` ex. number(5) 이하는 smallint로 변환한다.` </br>
+    ` ex. number(5) 초과시 int로 변환한다.` </br>
+    ` ex. number(5,2)와 같은 형태일 경우 decimal(5,2)로 변환한다.` </br> 
 
