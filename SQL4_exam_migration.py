@@ -93,7 +93,7 @@ with conn_dooodb:
                     hire_date datetime not null,
                     job_id varchar(10) not null,
                     salary int unsigned,
-                    commission_pct decimal(3, 2),
+                    commission_pct decimal(4, 2),
                     manager_id int unsigned,
                     department_id smallint(4)
                     )'''
