@@ -12,7 +12,7 @@
 ---------------------------------
 1. 각 테이블에는 하나의 `id` column이 반드시 있어야 한다.
 2. primary key는 반드시 `id` column에 걸려있어야 한다.
-3. `id` column은 int, auto_increment로 한다.
+3.
 4. primary key가 `job_id`의 경우에는 data type을 varchar로 한다. </br>
    단, 이관 후 int, auto_increment로 변환한다.</br>
 5. column 이름에 대문자는 허용하지 않는다.
