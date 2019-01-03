@@ -1,11 +1,10 @@
 1. Substring
--update Student set mobile = substr(mobile,5); <br>
+- update Student set mobile = substr(mobile,5); <br>
 mobile을 잘라내는데 5번째부터 잘라서 주세요.<br>
 <br>
 2. Where<br>
--`update Student set gender = 0 where not (phone like '010-5%' or phone like '010-2%' or phone like '010-6%' or <br>
-                                        phone like '010-4%' or phone like '010-8%') and id > 0;`<br>
--where절에는 반드시 id가 있어야 한다.<br>
+- ``` update Student set gender = 0 where not (phone like '010-5%' or phone like '010-2%' or phone like '010-6%' or phone like '010-4%' or phone like '010-8%') and id > 0; ```<br>
+- where절에는 반드시 id가 있어야 한다.<br>
 <br>
 3. Index<br>
 index는 모두 메모리에 올라간다고 알면 된다.<br>
