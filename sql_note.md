@@ -127,7 +127,7 @@ clustering = master(server)와 slave를 연결하는 것, 이 때 instance는 �
 - fetchone하면 tuple 하나로 <br>
 - executemany는 결과값이 마지막 하나만 나오기 때문에 select에는 쓸 수 없음<br>
 <br>
-- `update T set pct = %s where id = %s` <br>
+- ` update T set pct = %s where id = %s ` <br>
 에서 pct %s가 null이라면 기존의 pct값으로 update하고 싶아고 했을 때 <br>
 `pct = ifnull(%s, pct)` 라고 조건 주면 된다.<br>
 - connection pool<br>
