@@ -22,7 +22,7 @@ index는 모두 메모리에 올라간다고 알면 된다.<br>
 gender는 index가 없으니까 앞에 나온 애라도 index를 타게 하면 좋다.<br>
 <br>
 -----------Query -----------------<br>
-```select min(sub.name) subject_name,
+` select min(sub.name) subject_name,
                  (case stu.gender
                   when 1 then '남자'
                          else '여자' end) as 'gender', count(*) as 'num of students'
@@ -30,7 +30,7 @@ from Enroll en inner join Student stu on en.student = stu.id
                inner join Subject sub on en.subject = sub.id
 where stu.address = '서울'
 group by sub.id, stu.gender
-order by subject_name asc, stu.gender desc;``` <br>
+order by subject_name asc, stu.gender desc; `
 <br>
 5. Subquery<br>
 - subquery는 row 한 개만 가져올 수 있다.<br>
@@ -127,7 +127,7 @@ clustering = master(server)와 slave를 연결하는 것, 이 때 instance는 �
 - fetchone하면 tuple 하나로 <br>
 - executemany는 결과값이 마지막 하나만 나오기 때문에 select에는 쓸 수 없음<br>
 <br>
-- `update T set pct = %s where id = %s<br>`
+- `update T set pct = %s where id = %s` <br>
 에서 pct %s가 null이라면 기존의 pct값으로 update하고 싶아고 했을 때 <br>
 `pct = ifnull(%s, pct)` 라고 조건 주면 된다.<br>
 - connection pool<br>
