@@ -130,21 +130,28 @@ $("<h1>") --> h1을 차즌 ㄴ게 아니라 만드는 것 (<>)
 .always -> 성공하든 실패했든 수행하는 부분
 
 김도혜(Dohye Kim) [1:09 PM]
-===============ajax ===================
-type 자리에다가는 method를 쓰면 됨
-==============xhr=====================
-XMLHttpRequest (XHR) 은 AJAX 요청을 생성하는 JavaScript API 입니다. 이것의 메소드는 browser와 server간의 네트워크 요청을 전송하도록 해줍니다.
+ajax:
+- type 자리에다가는 method를 쓰면 됨
+- data: client가 server에게 보내는 모든 data
+- 서버와 통신할 때 ajax 씀
+
+xhr:
+- XMLHttpRequest (XHR) 은 AJAX 요청을 생성하는 JavaScript API 입니다. 이것의 메소드는 browser와 server간의 네트워크 요청을 전송하도록 해줍니다.
 여러 번 찾는 경우는 var 변수로 빼놓고 사용하는 게 좋다 (왜냐하면 보통의 html은 무거우니까, 엄청 많은 태그들 속에서 여러 번 찾으면 부담) (edited) 
-
-김도혜(Dohye Kim) [2:43 PM]
-========ajax=============
-data: client가 server에게 보내는 모든 data
-
-김도혜(Dohye Kim) [4:09 PM]
-xhr은 모든 정보를 담고 있다.
+- xhr은 모든 정보를 담고 있다.
 
 김도혜(Dohye Kim) [4:34 PM]
 href="#" #은 현재 페이지를 의미한다
 
-김도혜(Dohye Kim) [6:06 PM]
-서버와 통신할 때 ajax 씀
+$('#content').html(....);
+== document.getElementbyId('content).innerHTML=...;
+
+?는  url과 uri를 구분
+&는 parameter를 구분
+
+★ 한글이 url주소나 text값에 있을 경우 브라우저가 decoding
+프로그램으로 download받으면 decoding해줄 browser가 없으므로 직접 decode('utf-8') 해줘야 한다. (edited) 
+
+김도혜(Dohye Kim) [3:43 PM]
+★ xml의 장점: 잘못된 태그가 들어가면 무조건 오류가 난다. 서버 개발 시 실수가 줄어든다.
+★ CDATA(... <br> ... <br> ....) 이렇게 묶어줘야 한다. 그렇지 않으면 <br>을 depth가 있는 tag로 인식
