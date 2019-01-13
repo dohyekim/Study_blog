@@ -115,7 +115,8 @@ $. --> static method
 JSON.stringify-->json객체를 string화 한다.
 
 김도혜(Dohye Kim) [11:36 AM]
-$("<h1>") --> h1을 차즌 ㄴ게 아니라 만드는 것 (<>)
+
+$("<\h1>") --> h1을 찾는게 아니라 만드는 것 (<>)
 .tex(text자리에 json.arearoup.length를 넣고)
 .appendTo("body") body 태그  아래 중 맨 아래에다가 더해라
 
