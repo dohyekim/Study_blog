@@ -12,16 +12,22 @@ https://github.com/dohyekim/Study_blog/blob/master/scraping_melon.py
 <br>
 1) url을 만드는 함수<br>
 https://github.com/dohyekim/Study_blog/blob/master/urls.py<br>
+<br>
 2) iframe url을 만드는 함수<br>
 https://github.com/dohyekim/Study_blog/blob/master/makeurl.py<br>
+<br>
 3) ID, 회사 이름, url, iframe url, 가져온 시간을 csv에 작성하기<br>
 https://github.com/dohyekim/Study_blog/blob/master/get_url.py<br>
+<br>
 4) ERROR가 난 경우 이어서 가져오기<br>
 https://github.com/dohyekim/Study_blog/blob/master/continue.py<br>
+<br>
 5) Data를 세 종류로 나눠서 가져온 후 종류별로 csv 작성하기<br>
 https://github.com/dohyekim/Study_blog/blob/master/yes_no_img.py<br>
+<br>
 6) ID, URL, 회사이름, 시간을 csv에 작성하기<br>
 https://github.com/dohyekim/Study_blog/blob/master/crawl_site.py<br>
+<br>
 7) 업데이트 된 공고의 URL, 회사이름, 시간을 6)의 csv에 작성하기<br>
 https://github.com/dohyekim/Study_blog/blob/master/crawl_add.py<br>
 
