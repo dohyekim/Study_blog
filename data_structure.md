@@ -48,3 +48,8 @@ hashmap은 dict의 값을 바꾸고 있을 때 바꾸고 있는 값이 아닌 �
 javascript
 --> 아무거나 실행되기 때문에 function() () 안에 인자로 function을 두는 것. 그러면 그 function은 function 안에서만 실행됨
 hashtable은 dict의 값을 바꾸고 있을 때 read 가능 (edited) 
+
+hastmap을 hashtableㅂ다 훨씬 자주 쓴다.(cpu 좋아서 hashmap으로도 별로 에러날 일 없음)
+근데 db로 가는 동안에 connection에만 0.2초걸림 --> 나머지 th들은 waiting해야 됨 --> python, java가 느린 이유
+
+javascript = > DB, FILE, NETWORK --> 서로 다른 process에 두도록 함, 그래서 db가 언제 끝날지 모름 --> callback함수 실행(이거 다음에 실행하도록 컴퓨터에 전달) 그래서 node.js가 빠르다.
