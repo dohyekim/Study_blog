@@ -29,3 +29,22 @@ xml --> json화하는 module들이 많으니 참고
 
 김도혜(Dohye Kim) [5:56 PM]
 내가 접근하고자 하는 값을 key로 주면 훨씬 편함
+
+Hashmap -- nonblock(readonly ) --> block할 필요 없음 --> tuple과 관련
+Hashtable -- block (sql의 transaction과 비슷, 얘를 update하는 동안은 다른 게 중지)
+synchronized --> block
+asynchronized -->nonblock
+
+★ sync
+함수를 실행하는 ㅘ정이 e1, e2, e3이라면 ath가 어딘가까지 하다가 bth에 넘기면 bth도 할만큼 하다가 ath에 넘김. ath는 이전 ath를 이어서 실행(딱 나눠지는 게 아님)
+하나의 프로세스를 여러 개의 thread로 나눴을 때 a th와 b th가 동시에 한 함수를 부른다면 --> Java,python : a가 실행되는동안 b는 block됨
+만약 a th가 중간에 전역변수 값을 바꿨다고 하면 b th가 들어갔을 때 혼란(전역변수 값이 바뀌어있으니까) error. 심지어 어디서 error가 났는지 모름. 그러니까 blocking을 걸자(synchronized를 주는 것, Java는 줄 수 있음, python은 기본적으로 synchronized) a 가 하는 동안 나머지 th는 blocked --> 기다리고 있음
+
+DB의 start transaction과 같음
+
+hashmap은 dict의 값을 바꾸고 있을 때 바꾸고 있는 값이 아닌 다른 값들도 read조차 하지 못하게 함
+
+★ async
+javascript
+--> 아무거나 실행되기 때문에 function() () 안에 인자로 function을 두는 것. 그러면 그 function은 function 안에서만 실행됨
+hashtable은 dict의 값을 바꾸고 있을 때 read 가능 (edited) 
