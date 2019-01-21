@@ -1,10 +1,10 @@
+#멜론 Top100 곡들의 `앨범 재킷파일`을 다운받아,meltop100.xlsx 파일의 두번째 시트에 랭킹순으로 작성하시오. (단, 이미지파일의 크기는 축소하여 보기 좋게 작성 할 것!)
+
 import openpyxl
 from PIL import Image
 import requests
 import urllib.request as ur
 from bs4 import BeautifulSoup
-import time
-
 
 
 url = "https://www.melon.com/chart/index.htm"
@@ -22,7 +22,7 @@ load_book = openpyxl.load_workbook("./meltop100.xlsx")
 sheet2 = load_book.create_sheet()
 sheet2.title = "Sheet 2"
 
-# 이미지 다운받아서 xls에 
+# 이미지 다운받아서 xls에 추가하기
 n = 1
 for song in song_lsts:
     src = song.select_one('td:nth-of-type(4) div.wrap a img[src]').text
