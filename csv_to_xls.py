@@ -1,3 +1,5 @@
+#지난 시간에 작성한 meltop100.csv 파일을 읽어, meltop100.xlsx 로 저장하시오. (단, 랭킹, 좋아요, 좋아요차이 컬럼은 숫자형식으로 저장 할 것!)
+
 import openpyxl
 import csv, codecs
 
