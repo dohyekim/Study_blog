@@ -145,3 +145,6 @@ clustering = master(server)와 slave를 연결하는 것, 이 때 instance는 �
 --> fetch구문 밑에 if _done then leave 써주는 게 좋다.<br>
 그 이후에 select를 하든 뭘 하든..<br>
 
+18. > insert ignore into ~~
+update할 때는
+>> on duplicate key update ~~
