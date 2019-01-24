@@ -6,7 +6,7 @@ table = collection (schema가 없음. 즉 column이나 type 등이 없는 table�
 replicate : 여기서는 분산이라는 뜻(sharding)
 
 ----------------
-- db.collection.update({key: value}, jsonData}<br>
+db.collection.update({key: value}, jsonData}<br>
 <br>
 {key:value}가 where인 셈, key:value인 곳을 jsonData하게 바꾼다<br>
 32bit number : 4byte number ==> 작은 소수점, int<br>
@@ -20,6 +20,7 @@ replicate : 여기서는 분산이라는 뜻(sharding)
  s = "12345"<br><br>
 stack 영역 : 가까운 공간, s, &12 (거실에 밭 둘 순 없음)<br>
 heap 영역 : 먼 공간, "12345" 가변하기 쉬운 곳 (운동장에 밭 만들기)<br>
+-----------------------------
 
 capped: true,    # fixed size --> heap에 두지 않고 한 데 묶어두겠다 (heap은 따로 떨어져있음)<br>
 max: 100000 --> 10만개까지 만들겠다 <br>
