@@ -44,6 +44,6 @@ def song_rank():
         lst.append([song_no[i], rank[i], date, likecnt[i]])
         print("Rank_lst ----->", (i + 1) , "record  --> done!")
     
-    print ("Album_data has been downloaded!!!!")
+    print ("Ranking has been downloaded!!!!")
         
     return (lst)
