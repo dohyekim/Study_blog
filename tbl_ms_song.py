@@ -3,11 +3,8 @@ import melon_function as mf
 
 # MS_Song(Master Table)에 들어갈 data를 가져오는 함수
 def song_data():
-    # header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
     url = "http://vlg.berryservice.net:8099/melon/list"
-    
     sel_song = "#frm table tbody tr "
-   
     get_song = mf.request(url).select(sel_song)
    
 
@@ -32,10 +29,6 @@ def song_data():
     # 곡 상세 페이지에서 장르 가져오기
     for num, song_num in enumerate(song_no):
         url2 = "http://vlg.berryservice.net:8099/melon/songdetail?songId=" + song_num
-      
-        # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
-        # params =  {'contsIds': ",".join(song_no)}
-        
         song_data = "#downloadfrm div.wrap_info div.entry div.meta"
         get_data = mf.request(url2).select(song_data)
        
