@@ -5,10 +5,6 @@ import re
 
 
 url = "http://vlg.berryservice.net:8099/melon/list"
-# headers = {
-#     'Referer': 'https://www.melon.com/',
-#     'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
-# }
 trs = mf.request(url).select('tbody tr[data-song-no]')
 
 
@@ -31,11 +27,6 @@ def album_data ():
             
             # album 상세 페이지
             album_url = "http://vlg.berryservice.net:8099/melon/detail?albumId={}".format(album_id[0])
-            # headers = {
-            #     'Referer': 'https://www.melon.com/album/detail.htm?albumId={}'.format(album_id[0]),
-            #     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
-            # }
-
             # album 평점 json
             json_url = " http://vlg.berryservice.net:8099/melon/albumratejson?albumId={}".format(album_id[0])
 
