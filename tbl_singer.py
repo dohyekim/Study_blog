@@ -18,5 +18,5 @@ def singer():
     print(singer_info)
     return singer_info
 
-singer()
+
 
