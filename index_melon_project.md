@@ -1,5 +1,5 @@
 1. Connection between Python and MySQL, Requests <br>
-https://github.com/dohyekim/Study_blog/tree/master <br>
+https://github.com/dohyekim/Study_blog/blob/master/melon_function.py <br>
 2. Collecting data for Album table <br>
 https://github.com/dohyekim/Study_blog/blob/master/tbl_album.py <br>
 3. Collecting Song data for MS_Song table(master table) <br>
@@ -12,3 +12,4 @@ https://github.com/dohyekim/Study_blog/blob/master/tbl_songsinger.py <br>
 https://github.com/dohyekim/Study_blog/blob/master/tbl_song_rank.py <br>
 7. MainFlow <br>
 https://github.com/dohyekim/Study_blog/blob/master/mainflow.py <br>
+
