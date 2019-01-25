@@ -26,6 +26,7 @@ def songsinger():
         for j in lines:
             if j[1] in i[1] :
                 data.append([i[0], j[0]])
-                # print ("MS_Song===>>",i,"\nSinger====>>>",j)
+                print ("MS_Song===>>",i,"\nSinger====>>>",j)
     return data
+
 
