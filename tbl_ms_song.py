@@ -50,4 +50,3 @@ def song_data():
     
     return lst
 
-song_data()
