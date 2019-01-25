@@ -1,6 +1,3 @@
-
-import requests
-from bs4 import BeautifulSoup
 import re
 import melon_function as mf
 
@@ -52,3 +49,5 @@ def song_data():
     print (lst)
     
     return lst
+
+song_data()
