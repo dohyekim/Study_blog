@@ -15,7 +15,6 @@ def singer():
             pattern = re.compile("\'(.*)\'")
             singer_id = re.findall(pattern, singer_ids)[0] 
             singer_info.append([singer_id, singer_name])
-    print(singer_info)
     return singer_info
 
 
