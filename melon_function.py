@@ -1,7 +1,9 @@
 import pymysql
 import requests
 from bs4 import BeautifulSoup
+import time
 import re
+import json 
 
 # ------------------------------------------------------------------MySQL 함수 -----------------------------------------------------------------
 # Mysql connection 함수
@@ -47,3 +49,7 @@ def request(url):
     soup = BeautifulSoup(html, 'html.parser')
     return soup
 
+def requestJson(url):
+    rjson = requests.get(url).text
+    jsonData = json.loads(rjson, encoding = "utf-8")
+    return jsonData
