@@ -1,6 +1,5 @@
 import melon_function as mf
 import requests
-import json
 import re
 
 
@@ -27,6 +26,7 @@ def album_data ():
             
             # album 상세 페이지
             album_url = "http://vlg.berryservice.net:8099/melon/detail?albumId={}".format(album_id[0])
+
             # album 평점 json
             json_url = " http://vlg.berryservice.net:8099/melon/albumratejson?albumId={}".format(album_id[0])
 
@@ -41,8 +41,7 @@ def album_data ():
                 b += 1
 
             # album의 평점 가져오기
-            rating_json = requests.get(json_url).text
-            jsonData = json.loads(rating_json, encoding = "utf-8")
+            jsonData = mf.requestJson(json_url)
             rating = jsonData['infoGrade']['TOTAVRGSCORE']
 
             # 모든 column의 data 모으기
