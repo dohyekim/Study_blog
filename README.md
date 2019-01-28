@@ -9,3 +9,5 @@
 5. Linux(Ubuntu) Docker Container를 구동하기 위한 절차, 설치된 Ubuntu Container에 Telnet daemon 구동하기, 한글 사용 설정하기, Git 사용 설정하기 등의 작업 절차에 관해 보시려면 [여기](https://github.com/dohyekim/Study_blog/blob/master/Question_5.md)를 참고하세요.<br />
 
 6. SQL 관련한 문항은 [여기](https://github.com/dohyekim/Study_blog/blob/master/SQL_exam_index.md)를 참고하세요. <br />
+
+7. Data crawl에 관한 프로젝트는 [여기](https://github.com/dohyekim/Study_blog/blob/master/index_melon_project.md)를 참고하세요. <br />
