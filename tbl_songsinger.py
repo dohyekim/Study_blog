@@ -21,7 +21,7 @@ def songsinger():
     cursor.execute(sql2)
     lines = cursor.fetchall()
 
-    # MS_Song에서 가져온 노래 제목과 가수 이름을 비교해서 같은 아티스트의 이름이 있는 title을 append
+    # MS_Song에서 가져온 노래 제목과 가수 이름을 비교해서 같은 아티스트의 이름이 있는 가수 id와 노래 id append
     data = []
     for i in lst:
         for j in lines:
@@ -29,3 +29,5 @@ def songsinger():
                 data.append([i[0], j[0]])
                 print ("MS_Song===>>",i,"\nSinger====>>>",j)
     return data
+
+
