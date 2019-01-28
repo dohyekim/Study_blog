@@ -9,7 +9,6 @@ import datetime
 def song_rank():
     now = datetime.datetime.now()
 
-    like_id = []
     likecnt = []
     song_no = []
     rank = []
