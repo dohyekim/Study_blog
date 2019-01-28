@@ -6,9 +6,10 @@ def songsinger():
     sel = "#frm table tbody tr "
     get_song = mf.request(url).select(sel)
    
+    # 노래 id와 가수 이름 가져오기
     lst = []
 
-    for num , i in enumerate(get_song):
+    for i in get_song:
         song_number = i.attrs["data-song-no"]
         singer = i.select_one('div.rank02 span').text
         lst.append([song_number, singer])
@@ -28,5 +29,3 @@ def songsinger():
                 data.append([i[0], j[0]])
                 print ("MS_Song===>>",i,"\nSinger====>>>",j)
     return data
-
-
