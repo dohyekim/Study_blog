@@ -40,6 +40,8 @@ def song_rank():
     
     # update 일자
     date = now.strftime('%Y%m%d')
+
+    # data 모으기
     for i in range (0,100):
         lst.append([song_no[i], rank[i], date, likecnt[i]])
         print("Rank_lst ----->", (i + 1) , "record  --> done!")
