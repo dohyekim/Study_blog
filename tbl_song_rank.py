@@ -1,5 +1,4 @@
 import requests
-import json
 import melon_function as mf
 import tbl_album as album
 import datetime
@@ -28,14 +27,14 @@ def song_rank():
         
 
     url2 = "http://vlg.berryservice.net:8099/melon/likejson"
-    html2 = requests.get(url2).text
-    jsonData = json.loads(html2, encoding='utf-8')
+    jsonData = mf.requestJson(url2)
 
     # 좋아요
     for j in jsonData['contsLike']:
         if str(j['CONTSID']) == str((song_no)[b]):
             likecnt.append(j['SUMMCNT'])
             b = b+1
+        
     
     # update 일자
     date = now.strftime('%Y%m%d')
@@ -48,3 +47,4 @@ def song_rank():
     print ("Ranking has been downloaded!!!!")
         
     return (lst)
+
