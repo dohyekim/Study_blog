@@ -28,3 +28,11 @@ https://www.w3schools.com/
 김도혜(Dohye Kim) [10:51 AM]
 소프트웨어 공학 책
 eXtreme programming
+
+
+appelwebkit  브라우저에 그림을 그리는 툴인데 다 이걸 상속받아서 쓴다
+
+김도혜(Dohye Kim) [3:07 PM]
+Jenkins --> github에 있는 소스를 테스트하고 문제가 없으면 서버에 올림
+
+Linux 연습
