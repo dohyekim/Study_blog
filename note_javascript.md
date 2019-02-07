@@ -156,3 +156,140 @@ $('#content').html(....);
 김도혜(Dohye Kim) [3:43 PM]
 ★ xml의 장점: 잘못된 태그가 들어가면 무조건 오류가 난다. 서버 개발 시 실수가 줄어든다.
 ★ CDATA(... <br> ... <br> ....) 이렇게 묶어줘야 한다. 그렇지 않으면 <br>을 depth가 있는 tag로 인식
+
+----------------------------
+<h3> javascript ES6 </h3>
+const a = 1; 하면 a는 2나 3으로 절대 바뀔 수 없음
+let은 var 대신 사용하면 됨
+함수는 중복 X -->
+const act = (name="kim") => {console.log(...)}
+==
+var act  = function{...}
+
+console.log(`aesar ${aa} sfdlaet`)
+
+김도혜(Dohye Kim) [10:38 AM]
+javascript에서는 function과 json 이 class --> function 안에 this를 쓰면 함수 안의 변수를 쓸 수 있음
+arrow function의 this는 arrow function 내의 this가 아니고 그 arrow function을 싸고 있는 것의 this. arrow function 내에서 this를 쓰고 싶으면 function(...) 써줘야 함
+-----------------------------------------------------------------
+let jdata = {
+ id: 123,
+ age: 45,
+ name: `aaa`
+};
+let {id, age} = jdata;
+console.log(`QQQ>> id=${id}, age=${age}`);
+
+==
+(js)
+let id = jdata.id
+let age = jdata.age
+
+(python)
+id = jdata['id']
+age = jdata['age'] (edited) 
+
+김도혜(Dohye Kim) [10:53 AM]
+------------------------------
+let nums1 = [1, 2, 3],
+   nums2 = [7, 8, 9],
+   arrnum = [...nums1, ...nums2],
+   [first, ...rest] = arrnum,
+   [last] = nums2.reverse();
+
+nums2를 뒤집은 후 첫 번째 값을 last라는 변수에 담는다.
+
+arrnum의 첫번째 값을 first에 넣고 나머지를(...) rest에 담는다. 이 때 ...를 넣으면 []형태로 나옴
+[last, last2] = nums2.reverse();
+
+하면 last = 9, last2 = 8
+------------------------------
+const fn1 = (...arguments) => {
+    console.log(arguments);
+}
+----->
+fn1("aaa", 23,44)
+--->
+(3) ["aaa", 23, 44] (edited) 
+
+김도혜(Dohye Kim) [11:07 AM]
+---------
+pg 10
+
+then은 Promist(내장) class의 객체로 쓰였을 때 쓸 수 있다.
+
+김도혜(Dohye Kim) [11:23 AM]
+-------------------------------
+const getList = page => new Promise( (resolves, rejects) => {
+   const req = new XMLHttpRequest();
+   req.open('GET', "/replies/222/" + page);
+
+
+   req.onload = () => {
+       if (req.status === 200)
+           resolves( JSON.parse(req.response) );
+       else
+           rejects(Error(req.statusText));
+   };
+
+   req.onerror = err => {
+       console.error("ERROR:", err);
+       rejects(err);
+   };
+
+   req.send();
+});
+
+
+getList(11).then( res => {
+   console.log("Final Result>>", res);
+}, err => {
+console.error(err);
+})
+
+
+
+
+Error의 객체, onerror는 Error 객체 자동 생성됨 --> then 뒤의 값으로 가는 것
+if문만 res에 전달됨
+
+김도혜(Dohye Kim) [11:53 AM]
+------------------------------------------------------------------------
+class Ball extends Product {
+ constructor(id, name) {
+   super(id, name || `ball`);
+ }
+
+ print() {
+   super.print();
+   console.log(`This is Ball!!`);
+ }
+}
+const p1 = new Product(1, `p1`),
+     p2 = new Ball(2);
+console.log(p1.print());
+console.log(p2.print());
+
+-->
+Ball 이 Product의 자식 (edited) 
+super.print()는 부모의 함수를 부르는 것
+-------------------------------------------------------------------------
+export해야 import할 수 있음
+import ~ from ~
+(python의 경우는 ㅏㅍ일 이름 자체가 export
+from ~ import ~) (edited) 
+--------------------------------------------------------------------
+// product.js
+export default Product;
+import P from 'product';
+
+(product.js 안에는 Product라는 class가 있을 것)
+이때 P는 Product가 됨
+
+
+// out.js
+export const print = (msg) => log(msg);
+export const log = (s) => console.log(s);
+import { print, log } from './out.js';
+
+default를 안 붙였을 때는 print, log가 export의 print, log와 반드시 일치해야 함, 이 경우 두 개 불렀으니까 {}로 싸준 것 (edited) 
