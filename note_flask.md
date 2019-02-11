@@ -42,10 +42,10 @@ g가 instance화가 안 됐을 수도 있기 때문에 명시해주는 것
 (ex. import request한다고 해서 바로 request 객체를 만드는 게 아니기 때문에)
 
 김도혜(Dohye Kim) [10:55 AM]
-RunLoop: 웹서버는 multithrread --> 홍길동의 요청이 오면 thread local 이 하나 생김. Router에서 model로 가면 별도의 thread를 만들 수도 있고 그냥 이 thread local을 사용할 수도 있음. g는 홍길동, 김길동의 각각의 thread local이 사용함. 중간에 어디로 새지 못하게 local thread 안에 method의 순서를 박아놓음. request를 받아서 response가 나갈 때까지(loop) 이 순서를 지켜서 어디로 못 새게 만들어놔야 함. 이걸 runloop라고 한다. js의 경우네는 이게 무조건 보장돼야 함. async이기 때문. 이걸 여러 함수를 모아둔 thread local 클래스라고 봐도 됨. 중간에 db, file write, g 등으로 빠져나가도 다시 돌아올 수 있게. 이는 thread를 safe하게 만들어준다. ex) app.route('/a') def (): s = 1할 때 s는 thread local 안의 변수니까 김길동이 건들리가 없음 --> safe.
+RunLoop: 웹서버는 multithrread --> 홍길동의 요청이 오면 thread local 이 하나 생김. Router에서 model로 가면 별도의 thread를 만들 수도 있고 그냥 이 thread local을 사용할 수도 있음. g는 홍길동, 김길동의 각각의 thread local이 사용함. 중간에 어디로 새지 못하게 local thread 안에 method의 순서를 박아놓음. request를 받아서 response가 나갈 때까지(loop) 이 순서를 지켜서 어디로 못 새게 만들어놔야 함. 이걸 runloop라고 한다. js의 경우네는 이게 무조건 보장돼야 함. async이기 때문. 이걸 여러 함수를 모아둔 thread local 클래스라고 봐도 됨. 중간에 db, file write, g 등으로 빠져나가도 다시 돌아올 수 있게. 이는 thread를 safe하게 만들어준다. ex) app.route('/a') def (): s = 1할 때 s는 thread local 안의 변수니까 김길동이 건들리가 없음 --> safe.<br>
 @app.route('/boards/<boardid>')
 def test3(boardid):
     return "board id is %s" % boardid
-boardid라는 변수에 boardid를 넣어줌
+boardid라는 변수에 boardid를 넣어줌<br>
 
 --> board의 몇 번째 거를 보여주세요 라는 url을 만들 수 있음
