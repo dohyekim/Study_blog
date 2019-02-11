@@ -93,18 +93,16 @@ def dt():
 date가 가진 값을 trans의 매개변수로 주는 것은 get함수가 구현하는 것 (edited) 
 
 김도혜(Dohye Kim) [11:42 AM]
---------------------------------------------------------------
 custom_res = Response("Custom Response", 200, {'test': 'ttt'})
 -->Response의 객체를 만들고 내보낼 string, status code와 header까지 만들고
 return make_response(custom_res)
 --> 이걸 response로 보낸다 --> Flask가 할 일을 대신 해주는 셈
 
-# str : Simple String (HTML, JSON)
+str : Simple String (HTML, JSON)
 return make_response("custom response")
 이렇게만 보내도 되긴 함. Flask가 알아서 instance를 만들어줌
 
 김도혜(Dohye Kim) [12:00 PM]
----------------------------------------------------------------
 return ('REQUEST_METHOD: %(REQUEST_METHOD) s <br>'
        'SCRIPT_NAME: %(SCRIPT_NAME) s <br>'
        'PATH_INFO: %(PATH_INFO) s <br>'
