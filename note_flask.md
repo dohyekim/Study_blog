@@ -150,3 +150,150 @@ path = '/'인 경우에는 쿠키를 모든 사이트(블로그든 카페든)에
 
 김도혜(Dohye Kim) [2:31 PM]
 res = Response(///)했다면 return을 해줘야 함
+
+cookie는 브라우저에 담고
+session의 key는 서버에 담는다.
+로그인되어있는 상태인지는 사용자도 알아야 하지만 서버도 알아야 하기 때문 (edited) 
+
+김도혜(Dohye Kim) [3:43 PM]
+cookie는 누구나 접근할 수 있음, 심징어 조작ㄷ 할 수있음(request header안에 넣으면 되니까) --> sessionid로 비교
+
+김도혜(Dohye Kim) [3:49 PM]
+로그아웃처리
+@app.route('/delsess')
+def delsess():
+   if session.get('Token'):
+       del session['Token']
+   return "Session이 삭제되었습니다!"
+
+김도혜(Dohye Kim) [4:32 PM]
+session context(락커룸)에서
+세션1 - {token:'123X'}
+세션2 - {a : b}
+
+김도혜(Dohye Kim) [9:59 AM]
+AP: 네트워크 중간다리 (ex. 공유기)
+
+김도혜(Dohye Kim) [10:07 AM]
+https://jeong-pro.tistory.com/80
+기본기를 쌓는 정아마추어 코딩블로그
+Web - 쿠키와 세션의 차이, 용도, 사용법(cookie,session)
+웹에서 쿠키와 세션 (Cookie & Session) 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜의 특징 1) 비연결지향(Connectionless) HTTP는 먼저 클라이언트..
+Oct 21st, 2017
+
+김도혜(Dohye Kim) [10:23 AM]
+{% for title, name in lst %}
+   <li>{{title}}: {{name}}</li>
+{% endfor %}
+
+김도혜(Dohye Kim) [11:49 AM]
+layout - head와 body 사이에 macro 두기
+
+김도혜(Dohye Kim) [12:06 PM]
+layout에 있는 html들은 브라우저에 cache됨. 즉 재사용됨
+
+김도혜(Dohye Kim) [12:45 PM]
+macro를 import하고 있는 html(caller)에서 macro를 부를 때, route가 부르고 있는 변수를 caller에서도 쓸 수 있게 하려면 import 옆에 with context를 붙이면 된다.
+
+김도혜(Dohye Kim) [2:46 PM]
+div.container ==> 양쪽 여백이 생김
+
+김도혜(Dohye Kim) [5:18 PM]
+checkbox,
+modal 을 macro로 만들기 (edited) 
+
+김도혜(Dohye Kim) [5:25 PM]
+dict(id='xxx', name='sss', checked='checked') --> 이렇게 하면 바ㅗㄹ dictionary가 만들어지고 py.htm에서는 순서 관계 없이 dictionary이름.id를 하면 macro에서 순서지킬 필요 없음
+
+김도혜(Dohye Kim) [12:28 PM]
+{% include ["a.html", "b.html"] %}
+a, b 둘 다 있으면 a
+a 없으면 b
+
+김도혜(Dohye Kim) [12:51 PM]
+{% include "inc/navbars.html" %}
+
+항상 'inc/' 붙여줘야함
+if isinstance(dt, date):
+       return dt.strftime(fmt)
+
+dt가 date 형태이면
+dt를 fmt형태로 전환한다
+strptime str(string)을 parsing해서 time으로 바꾼다
+strftime str(string)을 formatting해서 time으로 바꾼다
+
+| safe
+
+html 태그를 인식하게 하고 싶을 때 (edited) 
+
+김도혜(Dohye Kim) [4:57 PM]
+읽기 좋은 코드가 좋은 코드다 (책임)
+
+김도혜(Dohye Kim) [3:36 PM]
+create_engine에서  engine은 database를 의미
+session은 한 database에 한 번 연결될 때마다 생기는 것
+scoped_session :: application context에 적용되는 session 즉 ㅁ메모리에 중복해서 올리지 않는다
+exc :: exception
+base :: database
+
+김도혜(Dohye Kim) [3:43 PM]
+db_session
+WAS에서
+db에서 session은 연결을 의미
+db와 서버를 연결하기 위한 object라고 생각하면 됨
+def init_database():
+   Base.metadata.create_all(bind=engine)
+
+bind=engine, 이 engine을 기준으로 생성ㅇ한다
+@app.before_first_request
+def beforeFirst():
+   init_database()
+
+database는 한 번만 생성함녀 됨. 이 때 session도 만들어지고 base도 만들어지니까
+dbsession을 이용해서 session을 여는데, 다 끝나면 이걸 꺼야 함 --> @app.teardown_appcontext
+def teardown(exception):
+   db_session.remove()
+
+--> 불필요한 session이 다 사라지게 함 (edited) 
+@app.teardown_request
+request 종료
+
+@app.teardown_appcontext
+
+--? request뿐 아니라 response객체까ㅣ 종료하는 ㅓㄳ
+mysql > show processslist;
+
+김도혜(Dohye Kim) [4:37 PM]
+ORM
+
+김도혜(Dohye Kim) [10:01 AM]
+sqlalchemy는 쿼리문을 만드는 역할 to pymysql 실제 일을 하는 건 pymysql
+즉 sqlalchemy는 interface일뿐
+
+김도혜(Dohye Kim) [10:07 AM]
+gcp가 만들어준 건 docker container와 비스샇ㄴ 개념, 이 container를 VM이라고 하기도 한닫
+
+김도혜(Dohye Kim) [10:12 AM]
+db와 하는 일 중에 가장 부담이 가는 일은 connection을 맺는 일 --> connection을 끊지 말고 그냥 재사용하자 --> 놀고 있는 conn에 새로 연결해줌 --> 사용자가 많아지면 새롱 ㄴconn 만든다 --> 처음에 conn맺는 사용자만 조금 오래 걸릴 뿐 --> session이 만료되기 전에 연결되면 session도  꺼질 일 없음
+db 하나가 줄 수 있는 session의 수 : 256 즉 256개의 서버가 하나의 db에 연결될 수 있음
+
+김도혜(Dohye Kim) [10:50 AM]
+s2 = s2._replace(likecnt=201)
+
+s2를 읽어와서 likecnt를 201로 바꿔서 새로 생성하는데 그 이름을 똑같이 s2로 해서 덮어쓰는 것 --> 많이 쓰면 메모리 낭비, 걍 dict쓰지
+
+d1 = s1._asdict()
+dictionary랑 같은데 순서를 맞춰서 줌
+
+김도혜(Dohye Kim) [1:00 PM]
+js의 ; == python의 \
+
+김도혜(Dohye Kim) [11:52 AM]
+first() --> None
+one() --> Error
+
+김도혜(Dohye Kim) [5:10 PM]
+jsonify가 가능한 건 [] + .....(기억안남)
+
+김도혜(Dohye Kim) [5:18 PM]
+truncate filter: 10개 이상이 되면 ...으로 표시하는 등의 작업을 할 수 있음
