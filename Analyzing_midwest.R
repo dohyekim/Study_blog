@@ -2,10 +2,10 @@
 midwest = as.data.frame(ggplot2::midwest)
 midwest = as.data.frame(midwest)
 
-totaldensity=aggregate(data=middf, popdensity~state,mean)
+totaldensity=aggregate(data=midwest, popdensity~state,mean)
 totaldensity[order(-(totaldensity$popdensity)),]
 
-asiandensity=aggregate(data=middf, percasian~state,mean)
+asiandensity=aggregate(data=midwest, percasian~state,mean)
 asiandensity[order(-(asiandensity$percasian)),]
 
 # 데이터 특징:
@@ -23,9 +23,11 @@ colnames(midwest)
 
 
 
-# total, asian 변수를 이용해 `전체 인구 대비 아시아계 인구 백분율` 파생변수(asianpct)를 추가하고, 히스토그램을 그리시오.
+# 전체 아시아계 인구수와, asian 변수를 이용해 `전체 아시아계 인구 대비 아시아계 인구 백분율` 파생변수(asianpct)를 추가하고, 히스토그램을 그리시오.
 ####
-midwest$asianpct = (midwest[,'asian'] / midwest[,'total']) * 100
+summedasian = sum(midwest$asian)
+midwest$asianpct = midwest[,'asian'] / summedasian * 100
+
 histdata = midwest[,c('asianpct', 'state')]
 hist(histdata$asianpct)
 
