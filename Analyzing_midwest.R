@@ -3,8 +3,11 @@ library(ggplot2)
 midwest = as.data.frame(ggplot2::midwest)
 midwest = as.data.frame(midwest)
 
-aggregate(data=midwest, popdensity~state,mean)
-aggregate(data=midwest, percasian~state,mean)
+totaldensity=aggregate(data=middf, popdensity~state,mean)
+totaldensity[order(-(totaldensity$popdensity)),]
+
+asiandensity=aggregate(data=middf, percasian~state,mean)
+asiandensity[order(-(asiandensity$percasian)),]
 
 # 데이터 특징:
 # midwest는 437개의 county에 관한 28개 분야의 정보를 담고 있는 dataframe이다.
