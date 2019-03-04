@@ -30,6 +30,10 @@ midwest$asianpct = midwest[,'asian'] / summedasian * 100
 
 histdata = midwest[,c('asianpct', 'state')]
 hist(histdata$asianpct)
+aa = histdata[histdata$asianpct > 5,]
+aa
+# 이 때 히스토그램을 보면 0-5구간에 대부분 몰려있는 걸 알 수 있으므로 5 이상인 것들만 뽑아보면 
+# IL의 두 county에서 전체 아시아인의 약 32퍼센트와 약 6퍼센트가 각각 살고있다는 걸 알 수 있다.
 
 
 
