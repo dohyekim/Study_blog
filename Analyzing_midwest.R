@@ -52,9 +52,6 @@ hist(dd$asianpct)
 ee = histdata[histdata$asianpct <= 0.01,]
 hist(ee$asianpct)
 
-# 이를 qplot으로 그려보면
-qplot(dd$asianpct)
-
 
 
 # 4. 도시(state)기준으로 아시아계 인구가 어떻게 분포하는지 설명하시오. ####
