@@ -7,9 +7,10 @@ aggregate(data=midwest, popdensity~state,mean)
 aggregate(data=midwest, percasian~state,mean)
 
 # 데이터 특징:
+# midwest는 437개의 county에 관한 28개 분야의 정보를 담고 있는 dataframe이다.
 # state는 총 5개, county는 총 437개로 나눠지고 이 중 아시아인은 최소 0명에서 최대 188,565명이 각 county에 살고 있다. 
 # 전체 인구밀도는 OH-MI-IL-IN-WI주 순서로 높고 
-# 주별 평균 아시아인 비율이 가장 높은 곳은 IL-WI-MI-OH-IN 순이다.
+# 주별 평균 아시아인 비율은 IL-WI-MI-OH-IN 순으로 높다.
 
 
 
