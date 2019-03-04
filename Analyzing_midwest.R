@@ -1,5 +1,4 @@
-# midwest 데이터를 data.frame으로 불러온 후, 데이터의 특징을 설명하시오. ####
-library(ggplot2)
+# midwest 데이터를 data.frame으로 불러온 후, 전체인구와 아시아계인구 데이터의 특징을 설명하시오. (state별 비교 설명)library(ggplot2) ####
 midwest = as.data.frame(ggplot2::midwest)
 midwest = as.data.frame(midwest)
 
