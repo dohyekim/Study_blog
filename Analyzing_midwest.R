@@ -7,24 +7,16 @@ aggregate(data=middf, popdensity~state,mean)
 aggregate(data=middf, percasian~state,mean)
 
 # 데이터 특징:
-state는 총 5개, county는 총 437개로 나눠지고 이 중 아시아인은 최소 0명에서 최대 188,565명이 각 county에 살고 있다. 
-전체 인구밀도는 OH-MI-IL-IN-WI주 순서로 높고 
-주별 평균 아시아인 비율이 가장 높은 곳은 IL-WI-MI-OH-IN 순이다.
+# state는 총 5개, county는 총 437개로 나눠지고 이 중 아시아인은 최소 0명에서 최대 188,565명이 각 county에 살고 있다. 
+# 전체 인구밀도는 OH-MI-IL-IN-WI주 순서로 높고 
+# 주별 평균 아시아인 비율이 가장 높은 곳은 IL-WI-MI-OH-IN 순이다.
 
 
 
 #poptotal 변수(컬럼)를 total로, popasian 변수를 asian으로 변수명을 변경하는 코드를 작성하시오. ####
-total = middf$poptotal
-middf$total = total
+colnames(middf)[colnames(middf)=="poptotal"] = "total"
+colnames(middf)[colnames(middf)=="popasian"] = "asian"
 colnames(middf)
-middf=middf[,-5]
-str(middf)
-
-asian = middf$popasian
-middf$asian = asian
-colnames(middf)
-middf=middf[,-9]
-str(middf)
 
 
 
