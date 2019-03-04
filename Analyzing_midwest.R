@@ -41,9 +41,7 @@ asianperstate[order(-asianperstate$asianpct),]
 
 
 # 5. 아시아계 인구 백분율(asianpct)의 전체 평균을 구하고, 평균을 초과하면 "lg", 그 외는 "sm"을 부여하는 파생변수(asianrate)를 추가하는 코드를 작성하시오. ####
-mean(midwest$asianpct)
 midwest$asianrate = ifelse(midwest$asianpct >= mean(midwest$asianpct),"lg","sm")
-head(midwest$asianrate)
 
 
 
