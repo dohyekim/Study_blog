@@ -28,7 +28,7 @@ colnames(midwest)
 summedasian = sum(midwest$asian)
 midwest$asianpct = midwest[,'asian'] / summedasian * 100
 
-histdata = midwest[,c('asianpct', 'state')]
+histdata = midwest[,c('asianpct', 'county')]
 hist(histdata$asianpct)
 
 # 이 때 히스토그램을 보면 0-5구간에 대부분 몰려있는 걸 알 수 있으므로 5 이상인 것들만 뽑아보면 
