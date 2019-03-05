@@ -1,6 +1,6 @@
 
 # 1. data$group 컬럼에 A조~C조 랜덤으로 160명씩 고르게 분포시키시오. ####
-data$group = rep(sample(c('A조','B조','C조')), times=160)
+data$group = sample(rep(paste0(LETTERS[1:3],"조"), times=nrow(data)/3), size=nrow(data))
 head(data)
 nrow(data[data$group=="A조",])
 nrow(data[data$group=="B조",])
