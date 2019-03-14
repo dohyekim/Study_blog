@@ -4,7 +4,10 @@
 <br>
 <h4> https://github.com/dohyekim/Study_blog/blob/master/scraping_melon.py
 <br>
-<h3> 2. Jobkorea의 IT 계열 채용 공고 가져오기
+<hr>
+<h3> 2. Jobkorea의 IT 계열 채용 공고 가져오기<br>
+ •	사용 프로그램 및 언어: Python, BeautifulSoup, Requests
+ 
 <br>
 <h4> 1) url을 만드는 함수
  https://github.com/dohyekim/Study_blog/blob/master/urls.py<br>
