@@ -302,3 +302,6 @@ client에서 server로 json/array를 보내고 싶을 때:
 request.forms/args/values.get() 도 되지만
 json형태 그대로 받고 싶을 때 (키:쌍일 수도 있지만 키:[쌍]일 수도 있기 때문에)
 request.json()을 사용하면 된다
+
+반대로 server에서 clien로 json을 내보낼 때는
+jsonify()쓰면 
