@@ -305,3 +305,28 @@ request.json()을 사용하면 된다
 
 반대로 server에서 clien로 json을 내보낼 때는
 jsonify()쓰면 
+
+김도혜(Dohye Kim) [9:51 AM]
+client에서 server로 json/array를 보내고 싶을 때:
+request.forms/args/values.get() 도 되지만
+json형태 그대로 받고 싶을 때 (키:쌍일 수도 있지만 키:[쌍]일 수도 있기 때문에)
+request.json()을 사용하면 된다
+
+김도혜(Dohye Kim) [9:56 AM]
+wget <url> --> url을 다운받는 리눅스 명령어
+
+김도혜(Dohye Kim) [5:38 PM]
+Jinja의 macro == Handlebars의 helper
+
+김도혜(Dohye Kim) [9:52 AM]
+sql alchemy 장점:
+1. connection이 풀나는 걸 막아줄 수 있음( connection을 최소화하고 하나가 끝나면 다시 그 connection을 사용)
+2. OR매핑
+
+모든 cache는 key:value쌍
+ajax를 세 개의 table에서 읽어야 한다고 하면
+새로운 라우터 /d를 만들고
+return jsonify({ x: table1,
+y: table2,
+z: table3
+})
