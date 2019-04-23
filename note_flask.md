@@ -330,3 +330,37 @@ return jsonify({ x: table1,
 y: table2,
 z: table3
 })
+
+script 코드에서 res(ajax함수에서 받은 return값)를 append하는 방식으로 서버에 가지 않고(화면 전환 없이)  append하면 나중에 고치기 힘드니까 아예 html(template)에 넣기 위해서 handlebar 사용
+따라서 header/footer만 jinja로 하고 나머지(  로그인 등등 )은 다 ajax로 처리하는게 일반적
+
+client에서 server로 json/array를 보내고 싶을 때:
+request.forms/args/values.get() 도 되지만
+json형태 그대로 받고 싶을 때 (키:쌍일 수도 있지만 키:[쌍]일 수도 있기 때문에)
+request.json()을 사용하면 된다
+
+김도혜(Dohye Kim) [9:56 AM]
+wget <url> --> url을 다운받는 리눅스 명령어
+
+김도혜(Dohye Kim) [5:38 PM]
+Jinja의 macro == Handlebars의 helper
+
+김도혜(Dohye Kim) [9:52 AM]
+sql alchemy 장점:
+1. connection이 풀나는 걸 막아줄 수 있음( connection을 최소화하고 하나가 끝나면 다시 그 connection을 사용)
+2. OR매핑
+모든 cache는 key:value쌍
+ajax를 세 개의 table에서 읽어야 한다고 하면
+새로운 라우터 /d를 만들고
+return jsonify({ x: table1,
+y: table2,
+z: table3
+})
+
+로그인체크 --> <a>태그를 열어서 해당 라우터로 보낸 후 그 라우터에서 로그인 체크하기
+리프레시 --> reload() (edited) 
+
+김도혜(Dohye Kim) [10:10 AM]
+session['token']을 request때마다 주기
+response로도 token값 보내주기
+
