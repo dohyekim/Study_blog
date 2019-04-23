@@ -293,3 +293,10 @@ export const log = (s) => console.log(s);
 import { print, log } from './out.js';
 
 default를 안 붙였을 때는 print, log가 export의 print, log와 반드시 일치해야 함, 이 경우 두 개 불렀으니까 {}로 싸준 것 (edited) 
+
+김도혜(Dohye Kim) [9:55 AM]
+<a href="#" onclick="2페이지가져오기()">2</a>
+
+
+김도혜(Dohye Kim) [10:00 AM]
+# 대신 javascript:void(); or javascript:; --> # 안 붙음
