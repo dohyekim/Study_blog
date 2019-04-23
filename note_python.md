@@ -14,3 +14,6 @@ yyy == list
 김도혜(Dohye Kim) [2:35 PM]
 if i > 10: continue --> 데이터가 많을 때 쓸 수 있는 코드 (edited) 
 db는 보통 여러 명이 쓰고 있기 때문에 db와의 접근을 적게 하는 게 좋기 때문에 insert ignore into보다는 python에서 이미 있는 자료인지를 파악/비교한 후에 on duplicate key update를 쓰는 게 좋다.
+
+김도혜(Dohye Kim) [5:50 PM]
+map은 list의 하나하나를 lambda에 들어갈 수 있게 해줌
