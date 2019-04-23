@@ -172,3 +172,6 @@ crontab -e
 0 3 * * * /backup_dooodb.sh >> /backup/backup.log 2>&1
 
 
+========Linux==============
+import os
+os.system('diff' [old] [new])
