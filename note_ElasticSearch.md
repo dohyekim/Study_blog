@@ -54,3 +54,11 @@ curl -X POST "localhost:9200/corpus/Corpus/1" -H 'Content-Type: application/json
 
 
 이 경우에는 Update
+
+
+<br>
+<h3> 
+  bulk
+ </h3>
+ <br>
+ curl --header "content-type:application/JSON" -XPOST http://localhost:9200/_bulk?pretty --data-binary @examples2.json
