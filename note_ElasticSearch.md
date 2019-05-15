@@ -15,6 +15,8 @@ curl --header "content-type: application/JSON" -XPOST http://localhost:9200/corp
 
 update:
 curl --header "content-type: application/JSON" -XPOST http://localhost:9200/corpus/Corpus/1_update?pretty -d '{"doc":{"aaa":2}}'
+
+
 {
   "_index" : "corpus",
   "_type" : "Corpus",
@@ -29,4 +31,16 @@ curl --header "content-type: application/JSON" -XPOST http://localhost:9200/corp
   "_seq_no" : 3,
   "_primary_term" : 1
 }
+
+
+or
+
+ curl -X POST "localhost:9200/corpus/_update/1" -H 'Content-Type: application/json' -d'
+{
+    "doc" : {
+        "Eng" : "thank you"
+    }
+}
+'
+
 
