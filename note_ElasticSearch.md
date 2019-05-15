@@ -44,3 +44,13 @@ or
 '
 
 
+참고
+
+curl -X POST "localhost:9200/corpus/Corpus/1" -H 'Content-Type: application/json' -d'
+{
+    "doc" : {
+        "name" : "new_nam"}}
+> '
+
+
+이 경우에는 Update
