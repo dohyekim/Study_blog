@@ -26,10 +26,21 @@ MVVM
   클라이언트(사용자 PC)는 데이터가 필요한 경우 클라이언트 내에 있는 Router에다가 요청을 보낸다. 그리고 ViewModel이란 게 있는데 ViewModel이란
   view가 가지고 있는 model이라고 볼 수 있다. 만일 새로운 데이터를 서버에 요청해야 할 경우 서버에 있는 router에 ViewModel이 요청을 보낸다. 
   요청을 보내면 서버의 router는 viewmodel에게 데이터를 내려보내주고 그 화면은 ember가 알아서 맞게 그려준다. 화면 전환이 거의 없고 부드러운 화면이 
-  그려짐.
+  그려짐. view를 표현하기 위해 만들어진 model이라고 볼 수 있다.
+  
+  viewmodel
+  view에 입력이 들어오면 viewmodel에 부탁을 하고, viewmodel은 필요한 data를 model에 요청, model이 data를 주면 viewmodel이 그 data를 가공함. 가공하고 저장이 끝난 순간 view가 알아서 새로운 데이터를 활용해서 화면을 바꿈. ( data binding ) -> 자동으로 갱신된다.
   
   이때 사용하는 프레임워크가 backbone, angular, ember, react, vue인 것.
   
+  
+  
+Models hold application data. They’re usually structs or simple classes.
+Views display visual elements and controls on the screen. They’re typically subclasses of UIView.
+View models transform model information into values that can be displayed on a view. They’re usually classes, so they can be passed around as references.
+- source: https://www.raywenderlich.com/34-design-patterns-by-tutorials-mvvm
+ 
+ 
  SPA
   Single Page Application으로 최초에 서버한테서 받은 html, js, css로 그린 화면만 가지고 시작한다. 후에 화면을 바꿀 일이 있으면
   이 화면에서 제어해서 새로운 화면을 만들게 해준다.
