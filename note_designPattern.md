@@ -45,3 +45,18 @@ View models transform model information into values that can be displayed on a v
   Single Page Application으로 최초에 서버한테서 받은 html, js, css로 그린 화면만 가지고 시작한다. 후에 화면을 바꿀 일이 있으면
   이 화면에서 제어해서 새로운 화면을 만들게 해준다.
   
+  
+ REST 
+ 
+ Flask가 완전한 REST 방식이 아님. (REST + jinja)
+ 
+ 완전한 REST 로 하고 싶어서 만든 게 ember
+ 
+ 
+ Node는 
+ 플랫폼, 웹 브라우저가 
+ 아니어도 javascript 개발이 가능하도록 만든 플랫폼
+ 
+ 
+ Node Express.js --> 서버 프레임워크
+ Node에서는 ember.js, vue.jsrk k
