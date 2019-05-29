@@ -23,8 +23,8 @@ EX. 테이블을 그린 class 내의 함수도 model이 될 수 있고 data를 s
   
 MVVM
   여기서부터는 클라이언트가 서버에 최초의 요청을 보내면 서버가 html, js, css를 내려보내준다. 하지만 이후의 요청부터는 데이터만 준다.
-  클라이언트(사용자 PC)는 데이터가 필요한 경우 클라이언트 내에 있는 Router에다가 요청을 보낸다. 그리고 ViewModel이란 게 있는데 ViewModel이란
-  view가 가지고 있는 model이라고 볼 수 있다. 만일 새로운 데이터를 서버에 요청해야 할 경우 서버에 있는 router에 ViewModel이 요청을 보낸다. 
+  클라이언트(사용자 PC)는 데이터가 필요한 경우 클라이언트 내에 있는 Router에다가 요청을 보낸다. Router는 경로를 설정해주는 역할을 한다. 그리고 ViewModel이란 게 있는데 ViewModel이란
+  view가 가지고 있는 model이라고 볼 수 있다. 만일 새로운 데이터를 서버에 요청해야 할 경우 서버에 있는 router에 ViewModel이 요청을 보낸다. 서버의 router에서 받은 json은 model에 그려져있는 ember object에 쏙쏙 박혀서 화면에 그려진다. 
   요청을 보내면 서버의 router는 viewmodel에게 데이터를 내려보내주고 그 화면은 ember가 알아서 맞게 그려준다. 화면 전환이 거의 없고 부드러운 화면이 
   그려짐. view를 표현하기 위해 만들어진 model이라고 볼 수 있다.
   
@@ -50,7 +50,8 @@ View models transform model information into values that can be displayed on a v
  
  Flask가 완전한 REST 방식이 아님. (REST + jinja)
  
- 완전한 REST 로 하고 싶어서 만든 게 ember
+ 완전한 REST 로 하고 싶다는 생각에서 나온 게 ember, vue 등등
+ 기존에는 
  
  
  Node는 
