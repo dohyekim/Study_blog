@@ -148,3 +148,20 @@ clustering = master(server)와 slave를 연결하는 것, 이 때 instance는 �
 18. > insert ignore into ~~
 update할 때는
 >> on duplicate key update ~~
+
+19. 여러 개의 처리를 할 경우 (pymysql)
+Ex. insert insert update
+try
+- connection 열기
+- transaction 걸기(autocommit = False)
+- insert, insert, update 실행
+- commit 하기
+except
+- 에러가 났을 경우 rollback
+- raise error
+finally
+- cur.close
+- conn.close
+( 만일 A() 함수가 b()를 호출하는 경우 b()에서 error가 나면 이미 exception 처리를 했기 때문에 A()는 에러가 났는지 모르고 계속 프로그램이 돌아가게 됨 (exception에서 runtime error를 이미 잡았기 때문에 프로그램이 멈추지 않고 돌아감) 그래서 A한테 b()에서 에러가 났으니까 계속 진행 ( 위 경우 commit )하지 말고 멈추라는 (이 경우 rollback)신호를 보내기 위해 하는 것이 raise)
+
+중요한 것은 insert/update 함수 안에서 한 번에 commit하거나 rollback
